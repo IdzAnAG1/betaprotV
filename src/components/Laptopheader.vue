@@ -32,7 +32,8 @@
                 </div> 
             </div>
       </div>
-      <div class="second_laptop_header montserrat-nav">
+    </header>
+    <header class="second_laptop_header montserrat-nav">
         <div class="second_laptop_header_container">
             <div class="second_laptop_header_container_logo ">
                 <span class="bebas-neue-regular">BETAPROTECT</span>
@@ -45,22 +46,26 @@
                 </div>
             </div>
             <div class="second_laptop_header_container_input">
-                <input type="text" class="second_laptop_header_container_input_field" placeholder="Поиск ...">
-                <button>Кнопка</button>
+                <field></field>
+            </div>
+            <div class="second_laptop_header_container_buttons">
+                <icons_1 name="tg"></icons_1>
+                <icons_1 name="tg"></icons_1>
+                <icons_1 name="tg"></icons_1>
+                <icons_1 name="tg"></icons_1>
             </div>
         </div>
-      </div>
     </header>
   </template>
-  
   <script setup>
-  import icons_1 from '../assets/icons/icons_1.vue'
+  import icons_1 from '@/assets/icons/icons_1.vue'
+  import field from '@/components/InputField.vue'
   import { commonRoutes } from '@/router'
   defineProps({
-    pages: {
-      type: Array,
-      default: () => commonRoutes
-    }
+      pages: {
+          type: Array,
+          default: () => commonRoutes
+      }
   })
   </script>
 
@@ -78,8 +83,11 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .second_laptop_header{
-        padding: 1rem;
-        background: #bcdcce;
+        position: sticky;
+        top: 0;
+        z-index: 1000; /* Чтобы хедер был поверх других элементов *
+        /* Остальные существующие стили */
+        background: rgb(188, 220, 206, 0.8);             
         color: #1d382c;
         font-weight: 900;
         font-size: 2.5rem;
@@ -90,7 +98,9 @@
         width: 100%;
         max-width: 1400px;
     }
-    
+    .second_laptop_header_container{
+        padding: 1rem;
+    }
     .laptop_header_nav {
         display: flex;
         gap: 2rem;
@@ -161,19 +171,39 @@
         justify-content: space-between;
         font-size: medium;
     }
-    .second_laptop_header_container_input{
+    .second_laptop_header_container {
+        display: flex;
+        gap: 1rem; /* Добавляем промежуток между элементами */
+        align-items: center;
+    }
+
+    .second_laptop_header_container_input {
+        flex: 1; /* Занимаем доступное пространство */
+        max-width: 800px; /* Максимальная ширина при больших экранах */
+        display: flex;
+        gap: 0.5rem;
+    }
+
+
+    .second_laptop_header_container_buttons{
         gap: 1rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
-    .second_laptop_header_container_input_field{
-        width: 25rem;
-        height: 2.5rem;
-        background-color: #FAFAFA;
-        border-radius: 5px;
-        border: none;
-        padding: 1rem;
+
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+        .second_laptop_header_container {
+            flex-wrap: wrap; /* Разрешаем перенос элементов */
+        }
+        
+        .second_laptop_header_container_input {
+            order: 1; /* Переносим поле поиска вниз */
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .second_laptop_header_container_catalog {
+            margin-left: auto; /* Выравниваем каталог справа */
+        }
     }
-    
 </style>

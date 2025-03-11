@@ -32,6 +32,6 @@ import icons_1 from '../assets/icons/icons_1.vue';
 .m_menu_text p {
     font-size: 15px;
     font-weight: 700;
-    color: #FAFAFA;
+    color: var( --third-color);
 }
 </style>

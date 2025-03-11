@@ -59,16 +59,16 @@ const placeHolderWords = [
         width: 100%; /* Занимаем всю ширину контейнера */
         min-width: 120px; /* Минимальная ширина поля */
         height: 2.5rem;
-        background-color: #FAFAFA;
+        background-color: var(--third-color);
         border-radius: 5px;
         border: none;
         padding: 1rem;
         flex: 1; /* Добавляем растягивание */
-        color: #2e5846;
+        color: var(--color-primary);
     }
     .second_laptop_header_container_button {
         border-radius: 5px;
-        background-color: #2e5846;
+        background-color: var(--color-primary);
         border: none;
         white-space: nowrap; /* Запрещаем перенос текста */
         padding: 0 1.5rem;

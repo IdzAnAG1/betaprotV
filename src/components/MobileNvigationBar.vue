@@ -75,7 +75,7 @@ const handleClose = () =>{
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #2e5846;
+  background: var(--color-primary);
   color: white;
 }
 
@@ -118,7 +118,7 @@ const handleClose = () =>{
 
 .nav_link.active {
   background: rgba(46, 88, 70, 0.1);
-  color: #2e5846;
+  color: var(--color-primary);
   font-weight: 500;
 }
 
@@ -127,7 +127,7 @@ const handleClose = () =>{
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #2e5846;
+  background: var(--color-primary);
   margin: 1rem;
   border-radius: 8px;
   color: white;

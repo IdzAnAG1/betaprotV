@@ -45,7 +45,7 @@
 <style scoped>
 /* Общие стили */
 .m_footer {
-  background: #2e5846;
+  background:var(--color-primary);
   color: #FAFAFA;
   padding: 2rem 1rem;
 }

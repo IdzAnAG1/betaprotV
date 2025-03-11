@@ -11,6 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --max_width-primary:1400px;
+  --color-primary: #2e5846;
+  --color-secondary:rgb(188, 220, 206, 0.8);
+  --third-color:#FAFAFA;
 }
 * {
   box-sizing: border-box;
@@ -20,10 +25,10 @@ hr{
   padding: 0;
   margin: 0 auto;
 }
-.poppins-bold-italic {
-  font-family: "Poppins", serif;
-  font-weight: 700;
-  font-style: italic;
+.flex-Center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .montserrat-nav {
   font-family: "Montserrat", serif;
@@ -31,22 +36,11 @@ hr{
   font-weight: 500;
   font-style: italic;
 }
-.roboto-nav{
-  font-family: "Roboto", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
 .bebas-neue-regular {
   font-family: "Bebas Neue", serif;
   font-weight: 400;
   font-style: normal;
 }
-
-
 body {
 margin: 0;
 }

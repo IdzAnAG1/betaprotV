@@ -1,16 +1,16 @@
 <template>
-    <header class="laptop_Header montserrat-nav">
+    <header class="laptop_Header flex-Center montserrat-nav">
       <div class="laptop_Header_container">
-        <ul class="laptop_header_nav">
+        <ul class="laptop_header_nav flex-Center">
           <li v-for="(page, index) in pages" :key="index">
             <router-link class="nav_link" :to="page.path" active-class="active">
               {{ page.name }}
             </router-link>
           </li>
         </ul>
-            <div class="contacts">
+            <div class="contacts flex-Center">
                 <div class="contacts_number">
-                    <p class="contacts_number_text">
+                    <p class="contacts_number_text flex-Center">
                         8(495) 781-42-14
                         <span class="contacts_number_text_2">
                             Горячая линия
@@ -33,7 +33,7 @@
             </div>
       </div>
     </header>
-    <header class="second_laptop_header montserrat-nav">
+    <header class="second_laptop_header flex-Center montserrat-nav">
         <div class="second_laptop_header_container">
             <div class="second_laptop_header_container_logo ">
                 <span class="bebas-neue-regular">BETAPROTECT</span>
@@ -72,14 +72,11 @@
   <style scoped>
     .second_laptop_header, .laptop_Header{
         width: 100%;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
     .laptop_Header {
-        color: #FAFAFA;
-        background: #2e5846;
+        color: var( --third-color);
+        background: var(--color-primary);
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .second_laptop_header{
@@ -87,7 +84,7 @@
         top: 0;
         z-index: 1000; /* Чтобы хедер был поверх других элементов *
         /* Остальные существующие стили */
-        background: rgb(188, 220, 206, 0.8);             
+        background: var(--color-secondary);             
         color: #1d382c;
         font-weight: 900;
         font-size: 2.5rem;
@@ -96,22 +93,20 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        max-width: 1400px;
+        max-width: var( --max_width-primary);
     }
     .second_laptop_header_container{
         padding: 1rem;
     }
     .laptop_header_nav {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
+        gap: 0.5rem;
         list-style: none;
         margin: 0;
         padding: 0;
     }
     
     .nav_link {
-        color: #FAFAFA;
+        color: var( --third-color);
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s ease;
@@ -119,15 +114,10 @@
         border-radius: 4px;
     }
     .contacts{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         gap:1rem;
     }
     .contacts_number_text{
-        display: flex;
         flex-direction: column;
-        justify-content: center;
     }
     .contacts_number_text_2{
         opacity: 0.6;
@@ -156,13 +146,13 @@
         font-family: 'Courier New', Courier, monospace;
     }
     .second_laptop_header_container_catalog{
-        color: #FAFAFA;
+        color: var( --third-color);
         display: flex;
         align-items: center;
         border: 1px solid #1d382c;
         padding: 0 1rem 0 1rem;
         border-radius: 4px;
-        background-color: #2e5846;
+        background-color:var(--color-primary);
     }
     .second_laptop_header_container_catalog_button{
         gap: 1rem;

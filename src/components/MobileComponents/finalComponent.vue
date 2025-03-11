@@ -30,14 +30,14 @@ defineProps({
 .action_container{
     width: 100%;
     padding: 1rem;
-    color: #FAFAFA;
+    color: var(--third-color);
 }
 .action{
     gap: 1rem;
     padding: 1rem;
     display: flex;
     align-items: center;
-    background: #2e5846;
+    background: var(--color-primary);
     border-radius: 5px 5px 0 0 ;
     -webkit-box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.2);
@@ -48,7 +48,7 @@ defineProps({
     box-shadow:  inset 5px 5px 8px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     background: #519b7b;
-    color: #FAFAFA;
+    color: var(--third-color);
     border-radius: 0 0 5px 5px;
 }
 

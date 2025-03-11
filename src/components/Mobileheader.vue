@@ -41,14 +41,14 @@
     display: flex;
     align-items: center; /* Вертикальное центрирование элементов */
     justify-content: space-between; /* Распределение элементов по краям */
-    background-color: #2e5846;
+    background-color: var(--color-primary);
     padding: 0.5rem 1rem; /* Отступы для удобства просмотра */
     font-size: clamp(14px, 1.5rem, 22px); /* Адаптивный размер шрифта */
   }
   
   /* Стили для логотипа */
   .logo {
-    color: white;
+    color: var(--third-color);
     font-size: 1.5rem; /* Размер шрифта можно также сделать адаптивным */
     font-weight: bold;
   }
@@ -73,23 +73,6 @@
     outline: none; /* Убираем стандартный фокус */
     background-color: white; /* Изменяем цвет фона при фокусе */
   }
-  
-  /* Стили для кнопки поиска */
-  .submit_button {
-    padding: 0.5rem 1rem; /* Внутренние отступы */
-    border: none; /* Убираем границу */
-    border-radius: 50%; /* Круглая форма */
-    background-color: #007bff; /* Голубой цвет */
-    color: white; /* Белый текст */
-    font-size: 1rem; /* Размер шрифта */
-    cursor: pointer; /* Изменяем курсор на "пальчик" */
-    transition: background-color 0.2s ease; /* Плавный переход при hover */
-  }
-  
-  .submit_button:hover {
-    background-color: #0056b3; /* Тёмно-голубой цвет при наведении */
-  }
-
   .other{
     display: flex;
   }

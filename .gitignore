@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+src/*.vue
+src/views/*.vue
+src/router/*.js

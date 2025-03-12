@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-src/*.vue
+src/App.vue
 src/views/*.vue
 src/router/*.js

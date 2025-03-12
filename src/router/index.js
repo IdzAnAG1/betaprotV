@@ -1,6 +1,7 @@
 import { createRouter,createWebHashHistory, createWebHistory } from "vue-router"; /* Импорт из пакета vue-router */
 import HomeView from '@/views/HomeView.vue';
 import Certificate from '@/views/Certificate.vue';
+import Delivery from '@/views/Delivery.vue';
 import About from '@/views/About.vue'; /* Импорт из моей папки views */
 const routes =  [ /* Создание константы routes для обозначения маршрутов */
     { /* Маршрут '/' - Home */
@@ -19,9 +20,9 @@ const routes =  [ /* Создание константы routes для обоз�
         component : Certificate
     },
     { /* Маршрут '/' - Home */
-        path : '/',
-        name : 'Home',
-        component : HomeView
+        path : '/Delivery',
+        name : 'Delivery',
+        component : Delivery
     },
     { /* Маршрут '/' - Home */
         path : '/',
